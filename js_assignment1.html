@@ -1,0 +1,127 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Assign 1</title>
+        <h2>JavaScript Assignment 1 (Basic JS)</h2>
+    </head>
+    <body>
+        <script>
+            // ---------------------------Variables in JS-------------------------------------
+
+            console.log("---------  Variable example  --------------")
+
+    // print full name 
+        
+    var fullName = {firstName: "kushang",lastName : "gharat"}
+
+    console.log("My name is "+fullName.firstName+" "+fullName.lastName);
+
+    // get day and date 
+    console.log("")
+    console.log("---------  Function example  --------------")
+
+    var dayDate = function (){
+
+    var today = new Date();
+    var day = today.getDay();
+
+    console.log("Today's date is: "+ today);
+    console.log("Today's day is: "+ day);
+    }
+
+    dayDate();
+
+    // Arrays of weekdays 
+
+    console.log("")
+    console.log("---------  array of weekdays  --------------")
+
+
+    var weekDays = new Array(7);
+
+    weekDays[0] = "Sunday";
+    weekDays[1] = "Monday";
+    weekDays[2] = "Tuesday";
+    weekDays[3] = "Wednesday";
+    weekDays[4] = "Thursday";
+    weekDays[5] = "Friday";
+    weekDays[6] = "Saturday";
+
+    console.log(weekDays)
+
+        var d = new Date();
+        var n = d.getDay();
+        console.log("Does todays day and array value get matched?? ");
+        
+        if ( n == weekDays.indexOf('Wednesday') ){
+            console.log("Matched")
+        }
+
+        else{
+            console.log("Unmatched")
+        }
+
+
+    // Area of triangle
+
+    console.log("")
+    console.log("---------  Area of Triangle  --------------")
+
+    var base = 10;
+    var height = 20;
+
+    var areaOfTriangleCalc = function(base,height){
+
+        return (base * height )/2
+    }
+
+    var areaOfTri = areaOfTriangleCalc(base,height);
+
+    console.log("If base is "+base+" and height is "+height+" ,Area of Triange is " + areaOfTri);
+
+    // make model 
+
+    console.log("")
+    console.log("---------  make model  --------------")
+
+    var makeModel = {Audi: "A6",
+                    Honda:"Jazz",
+                    Ford: "Figo"}
+
+
+    var keys = Object.keys(makeModel)
+
+    keys.forEach((key,index) => {
+        console.log(`${key}  ${makeModel[key]}`);
+
+    });
+
+    // console.log(keys);
+    var values = Object.values(makeModel)
+
+    // console.log(values);
+
+    console.log("")
+
+    console.log(makeModel);
+
+    var checkMakeModel =  function(v){
+
+        if (makeModel.Ford === v){
+        console.log("Dose Ford key has Figo value?? " + true);
+
+    }
+
+    else {
+        console.log("Dose ford key has figo value?? "+ false);
+    }
+    }
+
+    checkMakeModel("Figo");
+
+        </script>
+    </body>
+    </html>
